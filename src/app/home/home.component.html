@@ -1,0 +1,46 @@
+<div class="container" style="background-color:#ffffea;">
+<div class="row">
+<div class="col-12">
+
+<br/><br/><br/><br/>
+<h1 class="page-header text-center" style="border-bottom:3px dashed #ccc;">Search Your Favourite Pokemon</h1>
+<br/><br/><br/><br/>  
+
+				<div class="offset-3 col-6 text-center" >
+                <h4 class="page-header ">Search By Name</h4>
+				
+                <form role="form" #myform = "ngForm" (ngSubmit) = "getPokemon()">
+                    <div class="form-group float-label-control label-bottom">
+                        <label for=""></label>
+                        <input type="text" class="form-control" placeholder="Enter Your Favourite Pokemon" name="nameOfPKM" [(ngModel)]="nameOfPKM" >
+                    </div>
+					<div class="form-group float-label-control label-bottom">
+                        <input type="submit" class="btn btn-danger" value="Search">
+                    </div>
+                </form>
+				
+				<br/>
+				
+				<div *ngIf="response.id>0" style="margin: 0 auto; margin-top: 50px;;height: 30vh;
+  background: #FDE7A4;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 2px #fff inset,
+              -1px -1px 2px #fff inset;
+  border-radius: 3px/6px; padding:20px">
+
+<h1>Name: {{response.name}}</h1>
+<h2>ID:{{response.id}}</h2>
+<h3>Height: {{response.height}}</h3>
+<h4>Weight: {{response.weight}}</h4>
+<h5></h5>
+<h6></h6>
+
+
+</div>
+
+
+				
+				</div>
+</div>
+</div>
+</div>

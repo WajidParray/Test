@@ -1,0 +1,38 @@
+<br/><br/><br/><br/>
+<h1 class="page-header text-center">Pokemons</h1>
+
+
+   
+ 
+
+<div>
+	<h3>Sort : 
+	<input type="button" class="btn-info" value="Asc" (click)="clickAsc()">
+	&nbsp;
+	<input type="button" value="Desc" class="btn-primary" (click)="clickDec()">
+	</h3>
+	
+	
+	
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      
+      <th scope="col">Pokemon Name</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+  
+  
+  <tr *ngFor="let response of responses; index as i;">
+      
+      <td><a routerLink="/pokemonView" [queryParams]="{key: response}" >{{ response }}</a></td>
+   </tr>
+	
+	
+   
+  </tbody>
+</table>
